@@ -2,19 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import Footer from './Components/Footer/Footer'
 import Nav from './Components/Nav/Nav'
+import Layout from './Components/MainPageCard/Layout'
+import Layouts from './Components/Aside/Layout'
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <Nav />
-      <Text>123</Text>
+      <Layout />
+      <Layouts />
       <Footer />
-    </div>
+    </Container>
   )
 }
 
-const Text = styled.p`
-  font-weight: bold;
+const Container = styled.div`
+  max-width: 1300px;
 `
-
 export default App
