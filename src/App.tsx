@@ -9,8 +9,10 @@ function App() {
   return (
     <Container>
       <Nav />
-      <Layout />
-      <Layouts />
+      <Test>
+        <Layout />
+        <Layouts /> {/* Aside */}
+      </Test>
       <Footer />
     </Container>
   )
@@ -19,4 +21,13 @@ function App() {
 const Container = styled.div`
   max-width: 1300px;
 `
+
+const Test = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+`
+
 export default App
