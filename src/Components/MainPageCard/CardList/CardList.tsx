@@ -51,8 +51,7 @@ function CardList() {
   )
 }
 const Container = styled.div`
-  width: 500px;
-  height: 150px;
+  height: 200px;
   max-height: 500px;
   position: relative;
   border: 1px solid white;

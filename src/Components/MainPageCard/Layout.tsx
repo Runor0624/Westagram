@@ -33,7 +33,8 @@ function Layout() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 650px;
+  margin-left: 150px;
   border: 1px solid #dbdbdb;
   @media screen and (max-width: 768px) {
     width: 70%;

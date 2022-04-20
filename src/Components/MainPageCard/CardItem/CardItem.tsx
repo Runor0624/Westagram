@@ -43,7 +43,7 @@ const CardItems = styled.div`
   }
 `
 
-const CardIcons = styled.div`
+const CardIcons = styled.p`
   display: flex;
   align-items: center;
 `

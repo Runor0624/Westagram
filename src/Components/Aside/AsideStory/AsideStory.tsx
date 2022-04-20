@@ -68,16 +68,17 @@ function AsideStory() {
 
 const Container = styled.div`
   border: 1px solid #dbdbdb;
-  max-width: 230px;
+  max-width: 320px;
 `
 
 const AsideStorymap = styled.div`
   display: flex;
+  margin-left: 25px;
 `
 
 const AsideHeader = styled.div`
   display: flex;
-  width: 95%;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 `
