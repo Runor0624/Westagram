@@ -45,7 +45,7 @@ function CardList() {
           )
         })
       ) : (
-        <p>댓글이 없습니다.</p>
+        <NoComment>댓글이 없습니다.</NoComment>
       )}
     </Container>
   )
@@ -57,5 +57,10 @@ const Container = styled.div`
   border: 1px solid white;
   overflow-x: hidden;
   overflow-y: auto;
+`
+const NoComment = styled.p`
+  font-weight: bold;
+  font-size: 13px;
+  color: #999;
 `
 export default CardList

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import MainButton from '../../Button/MainButton'
 
 interface StoryTypes {
   id: number
@@ -60,6 +61,7 @@ function AsideStory() {
             <UserName>{item.username}</UserName>
             <LastOnline>{item.onlineTime}</LastOnline>
           </div>
+          <MainButton>팔로우</MainButton>
         </AsideStorymap>
       ))}
     </Container>
@@ -68,25 +70,26 @@ function AsideStory() {
 
 const Container = styled.div`
   border: 1px solid #dbdbdb;
-  max-width: 320px;
+  max-width: 275px;
 `
 
 const AsideStorymap = styled.div`
   display: flex;
-  margin-left: 25px;
+  margin-left: 20px;
+  justify-content: space-around;
 `
 
 const AsideHeader = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `
 
 const ProfileImage = styled.img`
   width: 50px;
   height: 50px;
-  margin: 15px 10px 0 0;
+  margin: 13px -10px 0 0;
   border-radius: 100%;
   overflow: hidden;
 `
