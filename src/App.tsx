@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Footer from './Components/Footer/Footer'
 import Nav from './Components/Nav/Nav'
 import Layout from './Components/MainPageCard/Layout'
 import Layouts from './Components/Aside/Layout'
@@ -13,7 +12,6 @@ function App() {
         <Layout />
         <Layouts /> {/* Aside */}
       </Test>
-      <Footer />
     </Container>
   )
 }

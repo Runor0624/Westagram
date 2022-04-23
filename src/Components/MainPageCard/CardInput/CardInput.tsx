@@ -53,7 +53,7 @@ function CardInput() {
         onKeyDown={onKeyDown}
         placeholder="댓글입력"
       />
-      <button onClick={addComments}>작성</button>
+      <CardButton onClick={addComments}>작성</CardButton>
     </Container>
   )
 }
@@ -65,5 +65,15 @@ const Container = styled.div`
 const Inputs = styled.input`
   flex: 1;
   border: none;
+  border-radius: 10px;
+  font-size: 15px;
+`
+
+const CardButton = styled.button`
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: #0095f6;
 `
 export default CardInput

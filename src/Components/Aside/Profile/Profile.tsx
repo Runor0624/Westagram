@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Images from '../../../Image/profile_si.png'
 
@@ -24,6 +25,7 @@ const AsideUserImage = styled.img`
   width: 50px;
   height: 40px;
   border-radius: 100%;
+  border: 2px solid #262626;
   overflow: hidden;
 `
 

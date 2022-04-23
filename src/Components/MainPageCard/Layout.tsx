@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import CardList from './CardList/CardList'
 import CardInput from './CardInput/CardInput'
+import CardInfo from './Info/CardInfo'
+import CardUserInfo from './Info/CardUserInfo'
 
 interface ImageTypes {
   id: number
@@ -22,9 +24,11 @@ const images: ImageTypes[] = [
 function Layout() {
   return (
     <Container>
+      <CardUserInfo />
       {images.map((item, idx) => (
         <ImageStyle src={item.image} alt={item.description} />
       ))}
+      <CardInfo />
       <CardList />
       <CardInput />
     </Container>
@@ -36,6 +40,7 @@ const Container = styled.div`
   max-width: 650px;
   margin-left: 150px;
   border: 1px solid #dbdbdb;
+  border-radius: 10px;
   @media screen and (max-width: 768px) {
     width: 70%;
     font-weight: bold;
@@ -44,5 +49,6 @@ const Container = styled.div`
 
 const ImageStyle = styled.img`
   width: 100%;
+  border-radius: 10px;
 `
 export default Layout

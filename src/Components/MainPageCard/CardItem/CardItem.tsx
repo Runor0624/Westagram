@@ -17,8 +17,6 @@ interface PropsType {
 const CardItem = ({
   id,
   comments,
-  isCompleted,
-  iscomment,
   onDelete,
   onComplete,
 }: PropsType) => {

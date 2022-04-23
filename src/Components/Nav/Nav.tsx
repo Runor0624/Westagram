@@ -2,8 +2,6 @@ import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
 import {
   BsHouseDoorFill,
-  BsHeartFill,
-  BsPlusCircle,
   BsFillCompassFill,
   BsFillPersonFill,
 } from 'react-icons/bs'
@@ -17,6 +15,10 @@ function Nav() {
     navigate('/')
   }
 
+  const goToLogin = () => {
+    navigate('/login')
+  }
+
   return (
     <Container>
       <Title onClick={goToMain}>Westagram</Title>
@@ -26,10 +28,8 @@ function Nav() {
       {/* <Checkbox /> */}
       <RightButtonGroup>
         <BsHouseDoorFill />
-        <BsFillCompassFill />
-        <BsPlusCircle />
+        <BsFillCompassFill onClick={goToLogin} />
         <BsFillPersonFill />
-        <BsHeartFill />
       </RightButtonGroup>
     </Container>
   )
@@ -57,7 +57,7 @@ const Title = styled.h1`
   cursor: pointer;
 `
 
-const InputBox = styled.div`
+const InputBox = styled.section`
   justify-items: center;
   text-align: center;
   margin-top: -15px;
@@ -71,9 +71,9 @@ const NavInput = styled.input`
   border-radius: 10px;
 `
 
-const RightButtonGroup = styled.div`
+const RightButtonGroup = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: -40px;
   width: 30%;
   font-size: 30px;
