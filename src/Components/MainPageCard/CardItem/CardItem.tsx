@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ICommentsTypes } from '../../../Interface/Comments'
 import { MdClose } from 'react-icons/md'
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 
 interface PropsType {
   id: number
@@ -14,16 +15,18 @@ interface PropsType {
   iscomment: ICommentsTypes[]
 }
 
-const CardItem = ({
-  id,
-  comments,
-  onDelete,
-  onComplete,
-}: PropsType) => {
+const CardItem = ({ id, comments, onDelete, onComplete }: PropsType) => {
+  const [isButton, setIsButton] = useState<boolean>(false)
+
+  const handleButton = () => {
+    setIsButton(!isButton)
+  } // 버튼 icon 변경 관련 로직
+
   return (
     <CardItems>
       <p onClick={() => onComplete(id)}>{comments}</p>
-      <CardIcons>
+      <CardIcons onClick={handleButton}>
+        {isButton ? <AiFillHeart /> : <AiOutlineHeart />}
         <MdClose onClick={() => onDelete(id)} />
       </CardIcons>
     </CardItems>
@@ -41,7 +44,7 @@ const CardItems = styled.div`
   }
 `
 
-const CardIcons = styled.p`
+const CardIcons = styled.section`
   display: flex;
   align-items: center;
 `
