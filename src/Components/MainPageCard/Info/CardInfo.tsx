@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import { ImBubble } from 'react-icons/im'
 
 function CardInfo() {
+  const [Heart, setHeart] = useState<boolean>(false)
+
+  const handleHeart = () => {
+    setHeart(!Heart)
+  } // 버튼 icon 변경 관련 로직
   return (
     <CardInfoContainer>
       <CardInfoIconGroup>
-        <AiOutlineHeart />
+        <div onClick={handleHeart}>
+          {Heart ? <AiOutlineHeart /> : <AiFillHeart />}
+        </div>
         <ImBubble />
       </CardInfoIconGroup>
 
