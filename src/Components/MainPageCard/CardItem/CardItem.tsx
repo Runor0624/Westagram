@@ -32,14 +32,12 @@ const CardItem = ({ id, comments, onDelete, onComplete }: PropsType) => {
     </CardItems>
   )
 }
-const CardItems = styled.div`
+const CardItems = styled.section`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-bottom: white;
-  font-size: 13px;
+  font-size: 14px;
   @media screen and (max-width: 768px) {
-    width: 60%;
+    width: 100%;
     font-weight: bold;
   }
 `

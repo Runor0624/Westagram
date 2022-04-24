@@ -23,7 +23,6 @@ const Footer = () => {
 const FooterMap = styled.p`
   display: flex;
   flex-direction: row;
-  text-align: center;
   font-size: 14px;
   font-weight: bold;
   color: #dbdbdb;

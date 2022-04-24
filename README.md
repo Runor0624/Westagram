@@ -18,3 +18,9 @@ React, TypeScript, Recoil, Styled-Components
 
 npm install 이후
 npm run start
+
+#### Lighthouse 점수 개선 전/후 비교
+
+##### 개선 전
+
+![LightHouseBefore](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fqw2aw%2FbtrAh8bwiUt%2FmbNRFHMni7lVX5LCUMEgUk%2Fimg.png)
