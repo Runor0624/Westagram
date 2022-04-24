@@ -40,7 +40,6 @@ const CardUserNames = styled.h4`
 `
 
 const CardUserLocation = styled.p`
-  margin-top: 5px;
   font-size: 12px;
 `
 export default CardUserInfo
