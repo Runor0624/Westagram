@@ -55,7 +55,7 @@ function AsideStory() {
         <p>모두 보기</p>
       </AsideHeader>
       {storys.map((item, idx) => (
-        <AsideStorymap>
+        <AsideStorymap key={idx}>
           <ProfileImage src={item.image} alt="테스트" />
           <div>
             <UserName>{item.username}</UserName>

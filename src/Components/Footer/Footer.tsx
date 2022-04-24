@@ -20,7 +20,7 @@ const Footer = () => {
   )
 }
 
-const FooterMap = styled.p`
+const FooterMap = styled.section`
   display: flex;
   flex-direction: row;
   font-size: 14px;

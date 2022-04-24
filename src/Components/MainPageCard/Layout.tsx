@@ -26,7 +26,7 @@ function Layout() {
     <Container>
       <CardUserInfo />
       {images.map((item, idx) => (
-        <ImageStyle src={item.image} alt={item.description} />
+        <ImageStyle src={item.image} alt={item.description} key={idx} />
       ))}
       <CardInfo />
       <CardList />
