@@ -27,9 +27,9 @@ function Nav() {
       </InputBox>
       {/* <Checkbox /> */}
       <RightButtonGroup>
-        <BsHouseDoorFill />
-        <BsFillCompassFill onClick={goToLogin} />
         <BsFillPersonFill />
+        <BsFillCompassFill onClick={goToLogin} />
+        <BsHouseDoorFill />
       </RightButtonGroup>
     </Container>
   )
