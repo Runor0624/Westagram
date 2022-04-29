@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import MainButton from '../../Button/MainButton'
 
 interface StoryTypes {
@@ -85,13 +85,26 @@ const AsideHeader = styled.div`
   align-items: center;
 `
 
+const ImagerotateTest = keyframes`
+0% {
+  transform: rotate(0deg);
+}50% {
+  transform: rotate(360deg);
+}100% {
+  transform: rotate(0deg);
+}
+`
+
 const ProfileImage = styled.img`
   width: 50px;
   height: 50px;
   margin: 13px -10px 0 0;
+  border: 2px solid red;
   border-radius: 100%;
   overflow: hidden;
+  animation: ${ImagerotateTest} linear 3s infinite;
 `
+
 const UserName = styled.p`
   font-size: 15px;
   font-weight: bold;

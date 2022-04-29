@@ -123,14 +123,15 @@ const DropdownTest = styled.ul`
   text-align: center;
   font-size: 11px;
   overflow: hidden;
+  z-index: 1;
 
   &.DropdownOpens {
     margin: 1px;
-    transition: 0.1s;
+    transition: 0s;
   }
 
   &.DropdownClose {
-    transition: 0.1s;
+    transition: 0s;
     opacity: 0;
   }
 
