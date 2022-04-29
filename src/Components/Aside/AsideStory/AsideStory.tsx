@@ -68,14 +68,13 @@ function AsideStory() {
   )
 }
 
-const Container = styled.div`
+const Container = styled.section`
   border: 1px solid #dbdbdb;
   max-width: 275px;
 `
 
 const AsideStorymap = styled.div`
   display: flex;
-  margin-left: 20px;
   justify-content: space-around;
 `
 
