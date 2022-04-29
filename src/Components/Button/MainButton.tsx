@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 // 메인페이지에서 사용하는 버튼 컴포넌트

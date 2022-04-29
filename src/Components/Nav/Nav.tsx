@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {
   BsHouseDoorFill,
@@ -8,7 +8,32 @@ import {
 import { useNavigate } from 'react-router-dom'
 // import Checkbox from '@mui/material/Checkbox'
 
+interface DropdownTypes {
+  id: number
+  contents: string
+}
+
+const Dropdowns: DropdownTypes[] = [
+  {
+    id: 1,
+    contents: '메인 페이지',
+  },
+  {
+    id: 2,
+    contents: '환경설정',
+  },
+  {
+    id: 3,
+    contents: '고객센터',
+  },
+]
+
 function Nav() {
+  const [ismenuopen, setIsmenuopen] = useState(false)
+  const menuOpen = () => {
+    setIsmenuopen((ismenuopen) => !ismenuopen)
+  }
+
   const navigate = useNavigate()
 
   const goToMain = () => {
@@ -21,13 +46,23 @@ function Nav() {
 
   return (
     <Container>
-      <Title onClick={goToMain}>Westagram</Title>
+      <Title>
+        Westagram
+        <DropdownTest
+          className={ismenuopen ? 'DropdownOpens' : 'DropdownClose'}
+        >
+          {Dropdowns.map((item, idx) => (
+            <DropdownListTest key={idx}>{item.contents}</DropdownListTest>
+          ))}
+        </DropdownTest>
+      </Title>
       <InputBox>
         <NavInput placeholder="검색" />
       </InputBox>
       {/* <Checkbox /> */}
       <RightButtonGroup>
-        <BsFillPersonFill />
+        <BsFillPersonFill onClick={menuOpen}></BsFillPersonFill>
+
         <BsFillCompassFill onClick={goToLogin} />
         <BsHouseDoorFill />
       </RightButtonGroup>
@@ -75,7 +110,38 @@ const RightButtonGroup = styled.section`
   display: flex;
   justify-content: space-around;
   margin-top: -40px;
-  width: 30%;
+  width: 25%;
   font-size: 30px;
+`
+
+const DropdownTest = styled.ul`
+  border: 1px solid #dbdbdb;
+  width: 50px;
+  height: 70px;
+  line-height: 25px;
+  list-style-type: none;
+  text-align: center;
+  font-size: 11px;
+  overflow: hidden;
+
+  &.DropdownOpens {
+    margin: 1px;
+    transition: 0.1s;
+  }
+
+  &.DropdownClose {
+    transition: 0.1s;
+    opacity: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    display: none;
+  }
+`
+
+const DropdownListTest = styled.li`
+  width: 100%;
+  margin-left: -15px;
 `
 export default Nav
