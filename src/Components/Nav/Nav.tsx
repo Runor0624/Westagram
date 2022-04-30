@@ -6,27 +6,8 @@ import {
   BsFillPersonFill,
 } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
+import { NavData } from '../../Data/NavData'
 // import Checkbox from '@mui/material/Checkbox'
-
-interface DropdownTypes {
-  id: number
-  contents: string
-}
-
-const Dropdowns: DropdownTypes[] = [
-  {
-    id: 1,
-    contents: '메인 페이지',
-  },
-  {
-    id: 2,
-    contents: '환경설정',
-  },
-  {
-    id: 3,
-    contents: '고객센터',
-  },
-]
 
 function Nav() {
   const [ismenuopen, setIsmenuopen] = useState(false)
@@ -51,7 +32,7 @@ function Nav() {
         <DropdownTest
           className={ismenuopen ? 'DropdownOpens' : 'DropdownClose'}
         >
-          {Dropdowns.map((item, idx) => (
+          {NavData.map((item, idx) => (
             <DropdownListTest key={idx}>{item.contents}</DropdownListTest>
           ))}
         </DropdownTest>
@@ -61,7 +42,7 @@ function Nav() {
       </InputBox>
       {/* <Checkbox /> */}
       <RightButtonGroup>
-        <BsFillPersonFill onClick={menuOpen}></BsFillPersonFill>
+        <BsFillPersonFill onClick={menuOpen} />
 
         <BsFillCompassFill onClick={goToLogin} />
         <BsHouseDoorFill />
@@ -126,7 +107,7 @@ const DropdownTest = styled.ul`
   z-index: 1;
 
   &.DropdownOpens {
-    margin: 1px;
+    margin: 2px;
     transition: 0s;
   }
 
