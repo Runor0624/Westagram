@@ -58,7 +58,7 @@ function CardInput() {
   )
 }
 const Container = styled.div`
-  max-width: 650px;
+  max-width: 700px;
   display: flex;
 `
 

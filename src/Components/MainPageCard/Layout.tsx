@@ -37,7 +37,7 @@ function Layout() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 650px;
+  max-width: 700px;
   margin-left: 150px;
   border: 1px solid #dbdbdb;
   border-radius: 10px;
