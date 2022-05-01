@@ -16,10 +16,6 @@ function SignUp({ children, disabled }: PropButton) {
     navigate('/login')
   }
 
-  const goToMain = () => {
-    navigate('/')
-  }
-
   const [inputse, setInputs] = useState({
     id: '',
     password: '',

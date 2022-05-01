@@ -52,11 +52,7 @@ function CardList() {
 }
 const Container = styled.div`
   height: 200px;
-  max-height: 500px;
-  position: relative;
-  border: 1px solid white;
-  overflow-x: hidden;
-  overflow-y: auto;
+  max-height: 800px;
 `
 const NoComment = styled.p`
   font-weight: bold;
