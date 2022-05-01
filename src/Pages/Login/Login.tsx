@@ -72,7 +72,6 @@ const Container = styled.div`
   max-width: 350px;
   height: 100vh;
   text-align: center;
-  align-self: center;
   @media screen and (max-width: 768px) {
     width: 70%;
     font-weight: bold;

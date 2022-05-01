@@ -4,6 +4,7 @@ import { RecoilRoot } from 'recoil'
 import App from './App'
 import Login from './Pages/Login/Login'
 import SignUp from './Pages/SignUp/SignUp'
+import Photo from './Pages/Photo/Photo'
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
           <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/Photo" element={<Photo />} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>

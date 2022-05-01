@@ -4,6 +4,7 @@ import {
   BsHouseDoorFill,
   BsFillCompassFill,
   BsFillPersonFill,
+  BsCamera,
 } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { NavData } from '../../Data/NavData'
@@ -17,8 +18,8 @@ function Nav() {
 
   const navigate = useNavigate()
 
-  const goToMain = () => {
-    navigate('/')
+  const goToPhoto = () => {
+    navigate('/photo')
   }
 
   const goToLogin = () => {
@@ -41,12 +42,13 @@ function Nav() {
         <NavInput placeholder="검색" />
       </InputBox>
       {/* <Checkbox /> */}
-      <RightButtonGroup>
+      <LeftButtonGroup>
         <BsFillPersonFill onClick={menuOpen} />
 
         <BsFillCompassFill onClick={goToLogin} />
         <BsHouseDoorFill />
-      </RightButtonGroup>
+        <BsCamera onClick={goToPhoto} />
+      </LeftButtonGroup>
     </Container>
   )
 }
@@ -87,7 +89,7 @@ const NavInput = styled.input`
   border-radius: 10px;
 `
 
-const RightButtonGroup = styled.section`
+const LeftButtonGroup = styled.section`
   display: flex;
   justify-content: space-around;
   margin-top: -40px;

@@ -83,7 +83,6 @@ const AsideHeader = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  align-items: center;
 `
 
 const ImagerotateTest = keyframes`
